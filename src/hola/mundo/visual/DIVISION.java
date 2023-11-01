@@ -4,6 +4,8 @@
  */
 package hola.mundo.visual;
 
+import java.awt.Color;
+import static java.awt.SystemColor.text;
 import javax.swing.JOptionPane;
 
 /**
@@ -34,9 +36,13 @@ public class DIVISION extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         TEXT1 = new javax.swing.JTextField();
         TEXT2 = new javax.swing.JTextField();
+        TXT3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(0, 255, 204));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("RESPUESTA");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,15 +50,31 @@ public class DIVISION extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setText("DIVISION");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 0));
+        jLabel2.setForeground(new java.awt.Color(0, 51, 255));
         jLabel2.setText("INGRESE UN NUMERO");
 
+        jLabel3.setForeground(new java.awt.Color(0, 51, 255));
         jLabel3.setText("INGRESE EL NUMERO A DIVIDIR");
 
         TEXT1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TEXT1ActionPerformed(evt);
+            }
+        });
+
+        TEXT2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TEXT2ActionPerformed(evt);
+            }
+        });
+
+        TXT3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TXT3ActionPerformed(evt);
             }
         });
 
@@ -62,12 +84,8 @@ public class DIVISION extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel1)))
-                .addGap(165, 165, 165))
+                .addComponent(jLabel1)
+                .addGap(210, 210, 210))
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,6 +96,12 @@ public class DIVISION extends javax.swing.JFrame {
                     .addComponent(TEXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TEXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(113, 113, 113))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addComponent(TXT3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,10 +116,14 @@ public class DIVISION extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(TEXT2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(jButton1)
-                .addGap(51, 51, 51))
+                .addGap(18, 18, 18)
+                .addComponent(TXT3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
+
+        jLabel1.getAccessibleContext().setAccessibleName("lbl division");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,22 +134,33 @@ public class DIVISION extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-      try {
-    double N1 = Double.parseDouble(TEXT1.getText());
-    double N2 = Double.parseDouble(TEXT2.getText());
-
-    if (N2 == 0) {
-        JOptionPane.showMessageDialog(rootPane, "No se puede dividir por cero. Por favor, ingrese un valor diferente para el divisor (N2).");
-    } else {
-        double division = N1 / N2;
-        JOptionPane.showMessageDialog(rootPane, "El resultado de la división es: " + division);
-    }
-} catch (NumberFormatException e) {
-    JOptionPane.showMessageDialog(rootPane, "Por favor, ingrese números válidos en ambas cajas de texto.");
-}
-
-          
+     double n1=Double.parseDouble(TEXT1.getText());
+     double n2=Double.parseDouble(TEXT2.getText());
+     double div;
+     
+     if(n2==0){
+     TXT3.setText("no es divisible para 0");
+     jLabel3.setForeground(Color.red);
+     
+     }else {
+     
+     jLabel2.setText("");
+     div=n1/n2;
+     JOptionPane.showConfirmDialog(rootPane,"El resultado es:"+div);
+     
+     
+     }
+     
+     
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void TEXT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TEXT2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TEXT2ActionPerformed
+
+    private void TXT3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TXT3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TXT3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +201,7 @@ public class DIVISION extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TEXT1;
     private javax.swing.JTextField TEXT2;
+    private javax.swing.JTextField TXT3;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
