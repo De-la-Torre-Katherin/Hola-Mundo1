@@ -48,8 +48,6 @@ public class Banderas extends javax.swing.JFrame {
             }
         });
 
-        lblimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resouses/descarga (1).jpeg"))); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,15 +62,14 @@ public class Banderas extends javax.swing.JFrame {
                         .addComponent(lblnumero)
                         .addGap(18, 18, 18)
                         .addComponent(lblnumero1)
-                        .addGap(316, 316, 316)
-                        .addComponent(lblresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnvisualizar)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(btnvisualizar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(lblimagen)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(79, 79, 79)
+                        .addComponent(lblimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,15 +77,16 @@ public class Banderas extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(lblbanderas, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblnumero)
-                    .addComponent(lblnumero1)
-                    .addComponent(lblresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblresultado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblnumero)
+                        .addComponent(lblnumero1)))
                 .addGap(18, 18, 18)
                 .addComponent(btnvisualizar)
-                .addGap(60, 60, 60)
-                .addComponent(lblimagen)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(lblimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -96,29 +94,20 @@ public class Banderas extends javax.swing.JFrame {
 
     private void btnvisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvisualizarActionPerformed
         // TODO add your handling code here:
+        
+        
+int numeroramdomico = (int)(Math.random() * 70 + 2);
+lblresultado.setText(Integer.toString(numeroramdomico ));
 
-double numeroramdomico=Math.random();
-
-int numeroAleatorio = (int)(Math.random() * 70+2); 
-
-lblresultado.setText(String.valueOf(numeroAleatorio));
-
-
-if ((numeroramdomico%2)==0){
-    
-    ImageIcon a=new ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\Hola Mundo Visual\\src\\Resouses\\descarga(1).jpg");
-    
-            lblimagen.setIcon(a);
-            
-            
-}else{
-    ImageIcon b =new ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\Hola Mundo Visual\\src\\Resouses\\ecuador.jpg");
-    
-            lblimagen.setIcon(b);
-            
+if (numeroramdomico % 2 == 0) {
+  
+    ImageIcon a = new ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\Hola Mundo Visual\\src\\Resouses\\perrito1.jpg");
+    lblimagen.setIcon(a);
+} else {
+   
+    ImageIcon b = new ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\Hola Mundo Visual\\src\\Resouses\\levi.jpg");
+    lblimagen.setIcon(b);
 }
-
-
 
 
 

@@ -35,7 +35,7 @@ public class Colores extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblColore.setText("        COLORES");
+        lblColore.setText("VALIDACION DE VOCALES");
 
         lblpalabras.setText("Palabras:");
 
@@ -59,23 +59,22 @@ public class Colores extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(lblpalabras, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(lblColore, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnvisualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtpalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(176, Short.MAX_VALUE))
+                    .addComponent(btnvisualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtpalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(141, Short.MAX_VALUE)
+                .addComponent(lblColore, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(128, 128, 128))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(lblColore, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(21, 21, 21)
+                .addComponent(lblColore, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblpalabras, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
@@ -83,7 +82,7 @@ public class Colores extends javax.swing.JFrame {
                         .addComponent(txtpalabra, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnvisualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         pack();
@@ -92,35 +91,62 @@ public class Colores extends javax.swing.JFrame {
     private void btnvisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvisualizarActionPerformed
         // TODO add your handling code here:
         
-        String letra ="a";
-        String letra1="e";
-         String letra2="i";
-        String letra3="o";
-         String letra4="u";
-       if(txtpalabra.getText().contains(letra)){
+       // String letra ="a";
+       // String letra1="e";
+       // String letra2="i";
+       // String letra3="o";
+       // String letra4="u";
+         
+     //  if(txtpalabra.getText().contains(letra)){
            
            
-           txtpalabra.setForeground(Color.GREEN);
-       }else if(txtpalabra.getText().contains(letra1)){
+         //  txtpalabra.setForeground(Color.GREEN);
+     //  }else if(txtpalabra.getText().contains(letra1)){
            
            
-           txtpalabra.setForeground(Color.orange);
+       //    txtpalabra.setForeground(Color.orange);
            
-       }else if(txtpalabra.getText().contains(letra2)){
-           
-           
-           txtpalabra.setForeground(Color.BLUE);
-       }else if(txtpalabra.getText().contains(letra3)){
+     //  }else if(txtpalabra.getText().contains(letra2)){
            
            
-           txtpalabra.setForeground(Color.PINK);
+     //      txtpalabra.setForeground(Color.BLUE);
+    //   }else if(txtpalabra.getText().contains(letra3)){
+           
+           
+       //    txtpalabra.setForeground(Color.MAGENTA);
     
-    }else if(txtpalabra.getText().contains(letra4)){
+  //  }else if(txtpalabra.getText().contains(letra4)){
            
            
-           txtpalabra.setForeground(Color.RED);
-    
-    }
+        //   txtpalabra.setForeground(Color.YELLOW);
+   // 
+    //}
+       
+        if (!txtpalabra.getText().isEmpty()) {
+            
+        String palabra= txtpalabra.getText();
+        
+        if (palabra.charAt(0) == 'a') {
+            
+            txtpalabra.setForeground(Color.GREEN);
+            
+        } else if (palabra.charAt(0) == 'e') {
+            
+            txtpalabra.setForeground(Color.ORANGE);
+            
+        } else if (palabra.charAt(0) == 'e') {
+            
+            txtpalabra.setForeground(Color.BLUE);
+            
+        } else if (palabra.charAt(0) == 'o') {
+            
+            txtpalabra.setForeground(Color.MAGENTA);
+            
+        } else if (palabra.charAt(0) == 'u') {
+            
+            txtpalabra.setForeground(Color.YELLOW);
+        }
+        }
     }//GEN-LAST:event_btnvisualizarActionPerformed
     
     

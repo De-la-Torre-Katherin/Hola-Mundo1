@@ -34,19 +34,18 @@
                       <Component id="lblnumero" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblnumero1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
-                      <Component id="lblresultado" min="-2" pref="132" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblresultado" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="btnvisualizar" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
-                      <Component id="btnvisualizar" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                      <Component id="lblimagen" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                      <Component id="lblimagen" min="-2" pref="347" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="151" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,16 +55,18 @@
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Component id="lblbanderas" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblnumero" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblnumero1" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblresultado" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblnumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblnumero1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnvisualizar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-              <Component id="lblimagen" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="lblimagen" min="-2" pref="198" max="-2" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,11 +95,6 @@
     <Component class="javax.swing.JLabel" name="lblresultado">
     </Component>
     <Component class="javax.swing.JLabel" name="lblimagen">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Resouses/descarga (1).jpeg"/>
-        </Property>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
